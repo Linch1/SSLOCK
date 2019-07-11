@@ -47,7 +47,7 @@ SSLock is a hardening suite equipped whit the most common Linux security pratice
 * Intrusion Detection And Prevention
 * Application Intrusion Detection And Prevention
 * File/Folder Integrity Monitoring
-* Automaaated Anti-Virus Scanning
+* Automated Anti-Virus Scanning
 * Automated Rootkit Detection
 * system log analyzer and reporter
 * System & Kernel hardening
@@ -60,7 +60,7 @@ SSLock is a hardening suite equipped whit the most common Linux security pratice
 * debsums 
 * nftables 
 * Improve Kernel Hardening
-* Lynis Score Chek
+* Lynis Score Check
 
 ## FAQ
 Why it's need to run it as ROOT ?
