@@ -38,6 +38,12 @@ SSLock
 
 SSLock is a hardening suite equipped whit the most common Linux security pratice, and enhanted whit the power of python automation.
 
+## Installation
+
+- git clone https://github.com/Linch1/SSLOCK
+- cd SSLOCK
+- sudo python3 sslock.py
+
 ## Main Features
 
 * Automated Email allerts
