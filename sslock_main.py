@@ -27,6 +27,8 @@ if os.geteuid() != 0:
     General.error_message("You need to have root privileges to run this script.\nRe-run the script using 'sudo'. Exiting...")
     exit()
 
+General.output_message('YES')
+
 # Store global informations
 EMAIL_ENABLE = General.answer(
     "To receive notifications from the system and for the correct configuration of some tools, email and Exim4 will"
