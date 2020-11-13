@@ -32,7 +32,8 @@ SSLOCK
 </p>
 
 <p align="center">
-Although this tool is written to automate the hardening process on linux systems, we must not ignore the real need for constant study and updating in order to reduce and / or identify the attacks we can receive.
+Although this tool is written to automate the hardening process on linux systems
+_we must not ignore the real need for constant study and updating in order to reduce and/or identify the attacks we can receive._
 </p>
 
 
