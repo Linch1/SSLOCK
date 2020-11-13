@@ -24,7 +24,7 @@
 </pre></p> --->
 
 <p align="center" >
-  <img  src="https://i.ibb.co/23ngSkt/shield.png" width=400>
+  <img  src="https://i.ibb.co/23ngSkt/shield.png" width=300>
 </p>
 
 <p align="center">
