@@ -46,13 +46,12 @@ SSLock
 SSLock is a hardening suite equipped whit the most common Linux security pratice, and enhanted whit the power of python automation.
 
 ## 📎 Menu
-- 💡 [Features](#-features)
-- 💾 Installation:
-	- Clone the code on your pc
+- 💡 [Features](#main-features)
+- 💾 [Installation](#installation) :
     - 👨‍💻 Desktop app In development
-- To Do 📝
-- :question: Faq 
-- :large_orange_diamond: Contribute
+- 📝 [To Do](#to-do)
+- :question: [Faq](#faq) 
+- :large_orange_diamond: [Contribute](contribution-credits--license)
 
 ## Installation
 
