@@ -1,5 +1,5 @@
 <h1><p align="center">
-SSLock
+SSLOCK
 </p></h1> 
 
 <!--- <pre><p align="center">
