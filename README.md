@@ -23,8 +23,8 @@
 
 </pre></p> --->
 
-<p align="center">
-  <img  src="https://i.ibb.co/23ngSkt/shield.png">
+<p align="center" >
+  <img  src="https://i.ibb.co/23ngSkt/shield.png" width=400>
 </p>
 
 <p align="center">
