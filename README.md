@@ -89,8 +89,7 @@ SSLock is a hardening suite equipped whit the most common Linux security pratice
 **when the tool has ended the job, you are invited to disable the root account** --> `$ sudo passwd -l root`
 
 
-## Contribution, Credits & License
-
+## Contribution
 Ways to contribute
 
    * Suggest a feature
@@ -100,3 +99,5 @@ Ways to contribute
    * Create a burp suite/zaproxy plugin
    * Help me document the code
    * Spread the word
+   
+## Credits & License
