@@ -84,8 +84,8 @@ SSLock is a hardening suite equipped whit the most common Linux security pratice
 * Lynis Score Check
 
 ## FAQ
-Why it's need to run it as ROOT ?
-there are some things that not work whit sudo, like, bash shell internal commands or injecting kernel values into the /proc filesystem. For task such as these, a person would have to go to the root command prompt.
+- **Why it's need to run it as ROOT ?**
+>there are some things that not work whit sudo, like, bash shell internal commands or injecting kernel values into the /proc filesystem. For task such as these, a person would have to go to the root command prompt.
 when the tool has ended the job, you are invited to disable the root account. "sudo passwd -l root"
 
 
