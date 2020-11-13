@@ -1,4 +1,4 @@
-<pre><p align="center">
+<!--- <pre><p align="center">
     
          .:+shdmNMMMMMMNmdhs+:.         
      -MMNMMMMMMMMMMMMMMMMMMMMMMNMM-     
@@ -21,7 +21,11 @@
                -yMMMMMMy-               
                  `+mm+`                 
 
-</pre></p>
+</pre></p> --->
+
+<p align="center">
+  <img  src="https://i.ibb.co/23ngSkt/shield.png">
+</p>
 
 <p align="center">
 Although this tool is written to automate the hardening process on linux systems, we must not ignore the real need for constant study and updating in order to reduce and / or identify the attacks we can receive.
