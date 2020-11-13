@@ -37,7 +37,7 @@ Although this tool is written to automate the hardening process on linux systems
 
 
 <p align="center">
-Automated Security Hardening For Linux Whit
+Automated Security Hardening For Linux With
 </p>
 <h3><p align="center">
 SSLock
