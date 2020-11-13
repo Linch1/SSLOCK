@@ -48,7 +48,7 @@ SSLock is a hardening suite equipped whit the most common Linux security pratice
 
 ## 📎 Menu
 - 💡 [Features](#main-features)
-- 💾 [Installation](#installation) :
+- 💾 [Installation](#installation-and-start) :
     - 👨‍💻 Desktop app In development
 - 📝 [To Do](#to-do)
 - :question: [Faq](#faq) 
