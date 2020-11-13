@@ -55,11 +55,11 @@ SSLock is a hardening suite equipped whit the most common Linux security pratice
 - :large_orange_diamond: [Contribute](contribution-credits--license)
 - [Credits and License](#credits--license)
 
-## Installation
+## Installation and Start
 
-- git clone https://github.com/Linch1/SSLOCK
-- cd SSLOCK
-- sudo python3 sslock.py
+- `$ git clone https://github.com/Linch1/SSLOCK`
+- `$ cd SSLOCK`
+- `$ sudo python3 sslock.py`
 
 ## Main Features
 
