@@ -43,8 +43,16 @@ Automated Security Hardening For Linux Whit
 SSLock
 </p></h3> 
 
-
 SSLock is a hardening suite equipped whit the most common Linux security pratice, and enhanted whit the power of python automation.
+
+## 📎 Menu
+- 💡 [Features](#-features)
+- 💾 Installation:
+	- Clone the code on your pc
+    - 👨‍💻 Desktop app In development
+- To Do 📝
+- :question: Faq 
+- :large_orange_diamond: Contribute
 
 ## Installation
 
