@@ -1,4 +1,8 @@
-<pre><p align="center">
+<h1><p align="center">
+SSLOCK
+</p></h1> 
+
+<!--- <pre><p align="center">
     
          .:+shdmNMMMMMMNmdhs+:.         
      -MMNMMMMMMMMMMMMMMMMMMMMMMNMM-     
@@ -21,28 +25,41 @@
                -yMMMMMMy-               
                  `+mm+`                 
 
-</pre></p>
+</pre></p> --->
+
+<p align="center" >
+  <img  src="https://i.ibb.co/23ngSkt/shield.png" width=300>
+</p>
 
 <p align="center">
-Although this tool is written to automate the hardening process on linux systems, we must not ignore the real need for constant study and updating in order to reduce and / or identify the attacks we can receive.
+Although this tool is written to automate the hardening process on linux systems
+<i>we must not ignore the real need for constant study and updating in order to reduce and/or identify the attacks we can receive.</i>
 </p>
 
 
 <p align="center">
-Automated Security Hardening For Linux Whit
+Automated Security Hardening For Linux With
 </p>
-<h2><p align="center">
+<h3><p align="center">
 SSLock
-</p></h2> 
-
+</p></h3> 
 
 SSLock is a hardening suite equipped whit the most common Linux security pratice, and enhanted whit the power of python automation.
 
-## Installation
+## 📎 Menu
+- 💡 [Features](#main-features)
+- 💾 [Installation](#installation-and-start) :
+    - 👨‍💻 Desktop app In development
+- 📝 [To Do](#to-do)
+- :question: [Faq](#faq) 
+- :large_orange_diamond: [Contribute](contribution-credits--license)
+- [Credits and License](#credits--license)
 
-- git clone https://github.com/Linch1/SSLOCK
-- cd SSLOCK
-- sudo python3 sslock.py
+## Installation and Start
+
+- `$ git clone https://github.com/Linch1/SSLOCK`
+- `$ cd SSLOCK`
+- `$ sudo python3 sslock.py`
 
 ## Main Features
 
@@ -69,13 +86,12 @@ SSLock is a hardening suite equipped whit the most common Linux security pratice
 * Lynis Score Check
 
 ## FAQ
-Why it's need to run it as ROOT ?
-there are some things that not work whit sudo, like, bash shell internal commands or injecting kernel values into the /proc filesystem. For task such as these, a person would have to go to the root command prompt.
-when the tool has ended the job, you are invited to disable the root account. "sudo passwd -l root"
+- **Why it's need to run it as ROOT ?**
+>there are some things that not work whit sudo, like, bash shell internal commands or injecting kernel values into the /proc filesystem. For task such as these, a person would have to go to the root command prompt.
+**when the tool has ended the job, you are invited to disable the root account** --> `$ sudo passwd -l root`
 
 
-## Contribution, Credits & License
-
+## Contribution
 Ways to contribute
 
    * Suggest a feature
@@ -85,3 +101,5 @@ Ways to contribute
    * Create a burp suite/zaproxy plugin
    * Help me document the code
    * Spread the word
+   
+## Credits & License
