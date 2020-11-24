@@ -1,5 +1,6 @@
 from SSLock import General
 import subprocess
+import os.path
 import time
 
 
@@ -10,7 +11,7 @@ def wpVirtualHost(EMAIL):
     ####################################################
 
     General.output_message("-- Creation of apache2 Virtual Host --")
-    DOMAIN_FULL = General.input_message("Insert a domain[.com/.it/.org/etc..] ")
+    DOMAIN_FULL = General.input_message("Insert a domain[ domain.(com/.it/.org/etc..) ] ")
     DOMAIN = '.'.join(DOMAIN_FULL.split(".")[:-1]) if len(DOMAIN_FULL.split(".")) > 2 else DOMAIN_FULL.split(".")[0]
     General.run_cmd(f"mkdir /var/www/{DOMAIN}")  # create a directory for the virtual host
     General.run_cmd(f"chown -R $USER:$USER /var/www/{DOMAIN}")  # assign the directory to $USER
@@ -37,6 +38,9 @@ def wpVirtualHost(EMAIL):
     General.run_cmd(f"sudo a2dissite 000-default.conf")  # Disable the default configuration
     General.run_cmd("sudo a2enmod rewrite")
     General.run_cmd("sudo systemctl restart apache2")  # restart apache
+    # Test apache configs
+    # sudo apachectl -t -D DUMP_VHOSTS
+    # sudo apachectl configtest
 
     # Add SSL to apache virtualhost
     General.run_cmd("apt install certbot python3-certbot-apache -y")
@@ -50,7 +54,10 @@ If questions are promp type the following answers:
 > redirect HTTP traffic to HTTPS: 2
 > If the validation of the domain go wrong just exit the script and investigate on the problem.
   You can restart the script on the same domain and it will work correctly""")
-    General.run_cmd_interactive(f"sudo certbot --apache -d {DOMAIN}.com -d www.{DOMAIN}.com") # runs interactive certbot configuration
+    General.run_cmd_interactive(f"sudo certbot --apache -d {DOMAIN_FULL} -d www.{DOMAIN_FULL}") # runs interactive certbot configuration
+
+    General.run_cmd(f"sudo chmod chmod o+r /etc/apache2/sites-available/{DOMAIN}.conf")  # allow the file to be read
+    General.run_cmd(f"sudo chmod o+r /etc/apache2/sites-available/{DOMAIN}-le-ssl.conf")  # allow the file to be read
 
     # wordpress virtualhost setup
     General.output_message("-- Configuring wordpress Db --")
@@ -65,6 +72,14 @@ If questions are promp type the following answers:
         f""" mysql -e " GRANT ALL PRIVILEGES ON {DB_NAME}.* TO '{DB_USER}'@'localhost'; " """,
         """ mysql -e " FLUSH PRIVILEGES; " """
     )
+
+    if(not os.path.exists('/tmp/wordpress')):
+        General.output_message("\n-- WORDPRESS DOWNLOAD --")
+        General.run_cmd("wget -P /tmp 'https://wordpress.org/latest.tar.gz' ")
+        General.run_cmd("tar -C /tmp -zxvf /tmp/latest.tar.gz")
+        General.run_cmd("touch /tmp/wordpress/.htaccess")
+        General.run_cmd("cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php")
+        General.run_cmd("mkdir /tmp/wordpress/wp-content/upgrade")
 
     General.run_cmd(f"cp -a /tmp/wordpress/. /var/www/{DOMAIN}")
     General.run_cmd(f"chown -R www-data:www-data /var/www/{DOMAIN}")
@@ -111,7 +126,7 @@ If questions are promp type the following answers:
     General.output_message(" > For check that PHP was installed sucesfully and it is working correctly do this steps: ")
     General.output_message(f"    - sudo nano /var/www/{DOMAIN}/info.php")
     General.output_message("    - Add the following line to the file '<?php phpinfo(); ?>' ")
-    General.output_message(f"    - Visit this link 'http://{DOMAIN}.com/info.php'")
+    General.output_message(f"    - Visit this link 'http://{DOMAIN_FULL}/info.php'")
     General.output_message(f"    If a table with php information was displayed and nothing went wrong remove the file\n"
                            f"    previously created 'sudo rm /var/www/{DOMAIN}/info.php'")
     time.sleep(5)

@@ -16,4 +16,3 @@ def auditd(EMAIL):
         MAILTO={EMAIL}
         1 0   * * *     root  /sbin/aureport -k -ts yesterday 00:00:00 -te yesterday 23:59:59
                     ''')
-
