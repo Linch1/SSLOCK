@@ -56,9 +56,6 @@ If questions are promp type the following answers:
   You can restart the script on the same domain and it will work correctly""")
     General.run_cmd_interactive(f"sudo certbot --apache -d {DOMAIN_FULL} -d www.{DOMAIN_FULL}") # runs interactive certbot configuration
 
-    General.run_cmd(f"sudo chmod chmod o+r /etc/apache2/sites-available/{DOMAIN}.conf")  # allow the file to be read
-    General.run_cmd(f"sudo chmod o+r /etc/apache2/sites-available/{DOMAIN}-le-ssl.conf")  # allow the file to be read
-
     # wordpress virtualhost setup
     General.output_message("-- Configuring wordpress Db --")
     DB_NAME = General.input_message("Database Name ")
