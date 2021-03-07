@@ -53,6 +53,12 @@ The following ufw rules have been entered automatically:
     if General.answer('(UFW) Are you using DHCP?'):
         General.run_cmd('ufw allow out 68 comment "allow the DHCP client to update"')
         General.output_message('Added Rules')
+       
+    # ufw http/https rule
+    if General.answer('(UFW) Do you nedd to allow http/https ( yes for websites servers ) ?'):
+        General.run_cmd('ufw allow http comment "allow http traffic update"')
+        General.run_cmd('ufw allow https comment "allow https traffic update"')
+        General.output_message('Added Rules')
 
     General.output_message('Starting Firewall')
     General.warning_message('Maybe existing ssh connections will be stopped\n')
