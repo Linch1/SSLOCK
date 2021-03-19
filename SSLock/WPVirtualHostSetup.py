@@ -45,7 +45,7 @@ def wpVirtualHost(EMAIL):
     # Add SSL to apache virtualhost
     General.run_cmd("apt install certbot python3-certbot-apache -y")
     General.run_cmd("mkdir /var/lib/letsencrypt")
-    General.run_cmd("chmod -R 755 /var/lib/letsencrypt")
+    General.run_cmd("chmod -R o+rx /var/lib/letsencrypt")
     General.output_message("""
 -- Certbot configuration --
 If questions are promp type the following answers:
@@ -55,6 +55,7 @@ If questions are promp type the following answers:
 > If the validation of the domain go wrong just exit the script and investigate on the problem.
   You can restart the script on the same domain and it will work correctly""")
     General.run_cmd_interactive(f"sudo certbot --apache -d {DOMAIN_FULL} -d www.{DOMAIN_FULL}") # runs interactive certbot configuration
+    General.output_message('If certbot failed chek the apache2 logs ( Ubuntu: /var/log/apache2/error.log ) ')
 
     # wordpress virtualhost setup
     General.output_message("-- Configuring wordpress Db --")
